@@ -1,0 +1,184 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", "Tofu";
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15vw;
+    height: 60px;
+}
+
+.navbar .nav-logo {
+    display: flex;
+    align-items: center;
+    font-family: normal;
+    position: relative;
+    top: 0.5px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.nav-logo i {
+    font-size: 1.7rem;
+    color: #CC4EAF;
+}
+
+.nav-logo h1 {
+    font-size: 0.95rem;
+    font-weight: bolder;
+    margin-left: 5px;
+}
+
+a {
+    color: #6B6B6B;
+    text-decoration: none;
+    font-size: 0.7rem;
+    margin-right: 25px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.navbar .nav-download button {
+    height: 29px;
+    width: 106px;
+    background: linear-gradient(to right top, #CE5D84, #CC54B3);
+    color: white;
+    font-size: 9px;
+    border: none;
+    border-radius: 24px;
+    border-top-right-radius: 0;
+    cursor: pointer;
+}
+
+.nav-download {
+    position: relative;
+    top: 1px;
+}
+
+.nav-download a {
+    margin-right: 7px;
+    position: relative;
+    top: 2px;
+}
+
+.background i {
+    font-size: 800px;
+    color: rgba(204, 78, 175, .15);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -45px;
+}
+
+/* Body */
+main{
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 260px;
+    left: 20px;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.main-heading p {
+    margin-top: 12px;
+    animation: Fede 800ms ease-in-out 300ms;
+}
+
+
+.main-quatos {
+    font-size: 0.8rem;
+    margin: 10px 0 14px 0;
+    animation: Fede 900ms ease-in-out 500ms;
+}
+
+main button {
+    height: 32px;
+    width: 150px;
+    background: linear-gradient(to right top, #CE5D84, #CC54B3);
+    color: white;
+    font-size: 12px;
+    border: none;
+    border-radius: 24px;
+    border-top-right-radius: 0;
+}
+
+.main-model {
+    object-fit: cover;
+    object-position: top;
+    height: 769px;
+    width: 411px;
+    position: relative;
+    top: -200px;
+    animation: FedeModel 900ms ease-in-out;
+}
+
+
+/* Animation for model and text */
+@keyframes FedeModel {
+    0% {
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes Fede {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.main-paragraphs button {
+    animation: Fede 950ms ease-in-out 600ms;
+}
+
+
+
+@media (max-width: 800px) {
+    header .navbar {
+        padding: 0 5vw;
+    }
+    .nav-options {
+        display: none;
+    }
+    main {
+        justify-content: space-between;
+    }
+    .main-model {
+        height: 900px;
+        width: 350px;
+        object-position: center;
+        position: relative;
+        top: -200px;
+        right: 20px;
+        bottom: 30px;
+        animation: FedeModel 900ms ease-in-out;
+    }
+}
